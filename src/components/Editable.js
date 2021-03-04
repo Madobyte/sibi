@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Typography, Grid } from "@material-ui/core";
 
 const Editable = ({
   text,
@@ -28,9 +29,12 @@ const Editable = ({
           {children}
         </div>
       ) : (
-        <div onClick={() => setEditing(true)}>
-          <span>{text || placeholder || "Editable content"}</span>
-        </div>
+        <Grid item xs={props.xs} onClick={() => setEditing(true)}>
+          {/* <span>{text || placeholder || "Editable content"}</span> */}
+          <Typography variant={props.typography || "body1"}>
+            {text || placeholder || "Editable content"}
+          </Typography>
+        </Grid>
       )}
     </section>
   );

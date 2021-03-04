@@ -13,18 +13,15 @@ function TopBar() {
     <>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            //className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
+          <IconButton edge="start" color="inherit" aria-label="menu" disabled>
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" /* className={classes.title} */>
+          <Typography variant="h6" style={{ flex: 1 }}>
             CV Generator
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" disabled>
+            Login
+          </Button>
         </Toolbar>
       </AppBar>
     </>

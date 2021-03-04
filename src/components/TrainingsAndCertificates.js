@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Content } from "./Content";
-import { Button } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import uniqueId from "./uniqueIdGenerator";
 
@@ -8,12 +8,13 @@ export const TrainingsAndCertificates = () => {
   const [contentList, setContentList] = useState([]);
 
   const addTrainingsAndCertificates = () => {
+    const index = uniqueId();
     setContentList(
       contentList.concat(
         <Content
           placeholder={["Training/Certificate Title", "Giving Body"]}
-          deleteItem={() => deleteItem(uniqueId())}
-          key={uniqueId()}
+          deleteItem={() => deleteItem(index)}
+          key={index}
         />
       )
     );
@@ -29,7 +30,7 @@ export const TrainingsAndCertificates = () => {
 
   return (
     <div className="training-and-certificates">
-      <h3 className="header">Training and Certificates</h3>
+      <Typography variant="h5">Trainings and Certificates</Typography>
       {contentList}
       <Button
         variant="outlined"

@@ -19,7 +19,6 @@ export const Content = (props) => {
         <Editable text={content[data] || data} type="text" key={data}>
           <TextField
             autoFocus
-            helperText="Required"
             label={data}
             onChange={(e) => handleChange(e, data)}
             size="small"

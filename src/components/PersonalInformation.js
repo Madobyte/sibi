@@ -13,7 +13,13 @@ export const PersonalInformation = () => {
 
   return (
     <div className="personal-information">
-      <Editable text={firstName || "Jose"} childRef={inputRef} type="text">
+      <Editable
+        text={firstName || "Jose"}
+        childRef={inputRef}
+        type="text"
+        typography="h2"
+        xs={6}
+      >
         <TextField
           variant="outlined"
           ref={inputRef}
@@ -26,7 +32,13 @@ export const PersonalInformation = () => {
           autoFocus
         />
       </Editable>
-      <Editable text={lastName || "Rizal"} childRef={inputRef} type="text">
+      <Editable
+        text={lastName || "Rizal"}
+        childRef={inputRef}
+        type="text"
+        typography="h2"
+        xs={6}
+      >
         <TextField
           variant="outlined"
           ref={inputRef}

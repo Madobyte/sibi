@@ -1,7 +1,7 @@
 import React from "react";
 
 /* Material UI */
-import { Paper } from "@material-ui/core";
+import { Paper, Box } from "@material-ui/core";
 
 /* Components */
 import { Achievements } from "./Achievements";
@@ -15,16 +15,20 @@ import { WorkExperiences } from "./WorkExperiences";
 
 function Resume() {
   return (
-    <Paper elevation={3} m={2}>
-      <PersonalInformation />
-      <Projects />
-      <WorkExperiences />
-      <Education />
-      <TrainingsAndCertificates />
-      <Achievements />
-      <TechnicalSkills />
-      <Interests />
-    </Paper>
+    <Box m={1}>
+      <Paper elevation={3}>
+        <Box p={1}>
+          <PersonalInformation />
+          <Projects />
+          <WorkExperiences />
+          <Education />
+          <TrainingsAndCertificates />
+          <Achievements />
+          <TechnicalSkills />
+          <Interests />
+        </Box>
+      </Paper>
+    </Box>
   );
 }
 

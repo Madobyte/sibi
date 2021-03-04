@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Content } from "./Content";
-import { Button } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import uniqueId from "./uniqueIdGenerator";
 
@@ -8,12 +8,13 @@ export const Projects = () => {
   const [contentList, setContentList] = useState([]);
 
   const addProjects = () => {
+    const index = uniqueId();
     setContentList(
       contentList.concat(
         <Content
           placeholder={["Project Title", "Technologies Used", "Description"]}
-          deleteItem={() => deleteItem(uniqueId())}
-          key={uniqueId()}
+          deleteItem={() => deleteItem(index)}
+          key={index}
         />
       )
     );
@@ -29,7 +30,7 @@ export const Projects = () => {
 
   return (
     <div className="projects">
-      <h3 className="header">Projects</h3>
+      <Typography variant="h5">Projects</Typography>
       {contentList}
       <Button
         variant="outlined"

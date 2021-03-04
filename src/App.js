@@ -1,6 +1,7 @@
 import React from "react";
 
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
+import { Grid } from "@material-ui/core";
 import TopBar from "./components/AppBar";
 import Resume from "./components/Resume";
 
@@ -20,13 +21,18 @@ function App() {
         contrastText: "#000",
       },
     },
-    spacing: 8,
   });
 
   return (
     <MuiThemeProvider theme={theme}>
       <TopBar />
-      <Resume m={3} />
+      <Grid container>
+        <Grid item xs={false} sm={1} />
+        <Grid item xs={12} sm={10}>
+          <Resume />
+        </Grid>
+        <Grid item xs={false} sm={1} />
+      </Grid>
     </MuiThemeProvider>
   );
 }
