@@ -18,12 +18,14 @@ export const Content = (props) => {
       {placeholder.map((data) => (
         <Editable text={content[data] || data} type="text" key={data}>
           <TextField
-            autoFocus
-            label={data}
-            onChange={(e) => handleChange(e, data)}
-            size="small"
-            value={content[data] || ""}
             variant="outlined"
+            size="small"
+            margin="dense"
+            label={data}
+            value={content[data] || ""}
+            onChange={(e) => handleChange(e, data)}
+            autoFocus
+            fullWidth
           />
         </Editable>
       ))}

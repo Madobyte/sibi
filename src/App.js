@@ -27,11 +27,11 @@ function App() {
     <MuiThemeProvider theme={theme}>
       <TopBar />
       <Grid container>
-        <Grid item xs={false} sm={1} />
-        <Grid item xs={12} sm={10}>
+        <Grid item xs={false} sm={1} md={2} lg={3} />
+        <Grid item xs={12} sm={10} md={8} lg={6}>
           <Resume />
         </Grid>
-        <Grid item xs={false} sm={1} />
+        <Grid item xs={false} sm={1} md={2} lg={3} />
       </Grid>
     </MuiThemeProvider>
   );

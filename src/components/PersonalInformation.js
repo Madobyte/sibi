@@ -30,6 +30,7 @@ export const PersonalInformation = () => {
           size="small"
           color="primary"
           autoFocus
+          fullWidth
         />
       </Editable>
       <Editable
@@ -49,6 +50,7 @@ export const PersonalInformation = () => {
           size="small"
           color="primary"
           autoFocus
+          fullWidth
         />
       </Editable>
       <Editable
@@ -66,6 +68,7 @@ export const PersonalInformation = () => {
           size="small"
           color="primary"
           autoFocus
+          fullWidth
         />
       </Editable>
       <Editable
@@ -87,6 +90,7 @@ export const PersonalInformation = () => {
           size="small"
           color="primary"
           autoFocus
+          fullWidth
         />
       </Editable>
     </div>

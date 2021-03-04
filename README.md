@@ -20,3 +20,7 @@ I used Material UI for the familiar android-like UI/UX.
 
 **03/04/2021**\
 Styled the UI. Disabled the `menuIcon` and Login button (for future use).
+
+Added desktop layout.
+
+I've come across a limitation of the Grid layout in Material UI wherein margin becomes negative when using `spacing`. I fixed it using the padding and margin of their `Box` component.
