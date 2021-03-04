@@ -17,3 +17,6 @@
 Finished writing the basic code. You can add and edit your information on the CV. All it needs right now is a proper UI.
 
 I used Material UI for the familiar android-like UI/UX.
+
+**03/04/2021**\
+Styled the UI. Disabled the `menuIcon` and Login button (for future use).
