@@ -6,11 +6,22 @@ import {
   Typography,
   Button,
   Grid,
+  Avatar,
+  Box,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import WorkIcon from "@material-ui/icons/Work";
+import { useAuth0 } from "@auth0/auth0-react";
 
-function TopBar() {
+const TopBar = () => {
+  const {
+    loginWithRedirect,
+    logout,
+    isAuthenticated,
+    user,
+    isLoading,
+  } = useAuth0();
+
   return (
     <AppBar position="static">
       <Toolbar>
@@ -27,12 +38,28 @@ function TopBar() {
             </Typography>
           </Grid>
         </Grid>
-        <Button color="inherit" disabled>
-          Login
-        </Button>
+        {isAuthenticated ? (
+          <>
+            <Box m={1}>
+              <Button
+                color="inherit"
+                onClick={() => logout({ returnTo: window.location.origin })}
+              >
+                Logout
+              </Button>
+            </Box>
+            <Avatar src={user.picture} />
+          </>
+        ) : isLoading ? (
+          <p>Loading...</p>
+        ) : (
+          <Button color="inherit" onClick={() => loginWithRedirect()}>
+            Login
+          </Button>
+        )}
       </Toolbar>
     </AppBar>
   );
-}
+};
 
 export default TopBar;

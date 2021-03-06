@@ -31,7 +31,14 @@ const Editable = ({
       ) : (
         <Grid item xs={props.xs} onClick={() => setEditing(true)}>
           {/* <span>{text || placeholder || "Editable content"}</span> */}
-          <Typography variant={props.typography || "body1"}>
+          <Typography
+            variant={props.typography || "body1"}
+            color={
+              type === "content" || type === "subheader"
+                ? "textSecondary"
+                : "textPrimary"
+            }
+          >
             {text || placeholder || "Editable content"}
           </Typography>
         </Grid>

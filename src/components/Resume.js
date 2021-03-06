@@ -1,7 +1,7 @@
 import React from "react";
 
 /* Material UI */
-import { Paper, Box, Grid } from "@material-ui/core";
+import { Paper, Box, Grid, Button } from "@material-ui/core";
 
 /* Components */
 import { Achievements } from "./Achievements";
@@ -13,8 +13,9 @@ import { Projects } from "./Projects";
 import { TechnicalSkills } from "./TechnicalSkills";
 import { TrainingsAndCertificates } from "./TrainingsAndCertificates";
 import { WorkExperiences } from "./WorkExperiences";
+import { SaveButton } from "./SaveButton";
 
-function Resume() {
+const Resume = () => {
   return (
     <Box m={1}>
       <Paper elevation={3}>
@@ -74,9 +75,19 @@ function Resume() {
             </Grid>
           </Grid>
         </Box>
+        <Grid container>
+          <Grid item xs={12} md={6}>
+            <SaveButton />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Button variant="contained" color="secondary" fullWidth>
+              Clear
+            </Button>
+          </Grid>
+        </Grid>
       </Paper>
     </Box>
   );
-}
+};
 
 export default Resume;

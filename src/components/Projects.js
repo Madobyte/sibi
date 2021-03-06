@@ -12,7 +12,11 @@ export const Projects = () => {
     setContentList(
       contentList.concat(
         <Content
-          placeholder={["Project Title", "Technologies Used", "Description"]}
+          data={{
+            title: "Project Title",
+            subheader: "Technologies Used",
+            content: "Description",
+          }}
           deleteItem={() => deleteItem(index)}
           key={index}
         />

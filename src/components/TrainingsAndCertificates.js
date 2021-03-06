@@ -12,7 +12,10 @@ export const TrainingsAndCertificates = () => {
     setContentList(
       contentList.concat(
         <Content
-          placeholder={["Training/Certificate Title", "Giving Body"]}
+          data={{
+            title: "Training/Certificate Title",
+            subheader: "Giving Body",
+          }}
           deleteItem={() => deleteItem(index)}
           key={index}
         />

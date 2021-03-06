@@ -2,10 +2,12 @@ import React from "react";
 
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
+
 import TopBar from "./components/AppBar";
+import Instructions from "./components/Instructions";
 import Resume from "./components/Resume";
 
-function App() {
+const App = () => {
   const theme = createMuiTheme({
     palette: {
       primary: {
@@ -29,12 +31,13 @@ function App() {
       <Grid container>
         <Grid item xs={false} sm={1} md={2} lg={3} />
         <Grid item xs={12} sm={10} md={8} lg={6}>
+          <Instructions />
           <Resume />
         </Grid>
         <Grid item xs={false} sm={1} md={2} lg={3} />
       </Grid>
     </MuiThemeProvider>
   );
-}
+};
 
 export default App;

@@ -12,12 +12,12 @@ export const WorkExperiences = () => {
     setContentList(
       contentList.concat(
         <Content
-          placeholder={[
-            "Job Title",
-            "Company",
-            "Inclusive Date",
-            "Description",
-          ]}
+          data={{
+            title: "Job Title",
+            subheader: "Company",
+            subheader2: "Inclusive Date",
+            content: "Description",
+          }}
           deleteItem={() => deleteItem(index)}
           key={index}
         />
